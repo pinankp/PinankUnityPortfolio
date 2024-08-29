@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinank Patel | Game Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #343a40; /* Dark Gray */
+            color: #ffffff;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.125rem;
+            margin-top: 0.5rem;
+            color: #cfd8dc; /* Light Gray */
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
+
+        .game-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .game-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .game-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-item h2 {
+            font-size: 1.25rem;
+            margin: 0 0 0.5rem;
+            color: #343a40; /* Dark Gray */
+        }
+
+        .game-item p {
+            font-size: 1rem;
+            margin: 0 0 1rem;
+            color: #555;
+        }
+
+        .game-item a {
+            text-decoration: none;
+            color: #007bff; /* Bootstrap Blue */
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .game-item a:hover {
+            color: #0056b3; /* Darker Blue */
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #343a40; /* Dark Gray */
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #cfd8dc; /* Light Gray */
+            text-decoration: underline;
+        }
+
+        /* Responsive Design Adjustments */
+        @media (max-width: 1200px) {
+            .game-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .game-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pinank Patel</h1>
+        <p>Unity3D Developer | Explore My Game Projects</p>
+    </header>
+
+    <div class="container">
+        <div class="game-list">
+            <!-- Memory Game -->
+            <div class="game-item">
+                <h2>Memory Game</h2>
+                <p>Challenge your memory with this classic game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1713526630509-MemoryGame_WebGL/MemoryGame_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Math Balancing -->
+            <div class="game-item">
+                <h2>Math Balancing</h2>
+                <p>Balance math equations in this challenging game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1713526603703-MathBalancing_WebGL/MathBalancing_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Connect Dots -->
+            <div class="game-item">
+                <h2>Connect Dots</h2>
+                <p>Connect the dots to form interesting shapes.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1713526551600-ConnectDots_WebGL/ConnectDots_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Cups and Balls -->
+            <div class="game-item">
+                <h2>Cups and Balls</h2>
+                <p>A fun game of hiding and seeking with cups and balls.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1713438133732-CupsAndBalls_WebGL/CupsAndBalls_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Ilu Hops Skip Counting -->
+            <div class="game-item">
+                <h2>Ilu Hops Skip Counting</h2>
+                <p>Help Ilu hop and skip in this counting game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699359285989-IluHopsSkipCounting_WebGL/IluHopsSkipCounting_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Ebb and Blow -->
+            <div class="game-item">
+                <h2>Ebb and Blow</h2>
+                <p>A unique game with engaging mechanics and challenges.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699338273442-EbbAndBlow_WebGL/EbbAndBlow_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Color Match -->
+            <div class="game-item">
+                <h2>Color Match</h2>
+                <p>Match colors in this vibrant and challenging game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699338241765-ColorMatch_WebGL/ColorMatch_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Brain Shift Overdrive -->
+            <div class="game-item">
+                <h2>Brain Shift Overdrive</h2>
+                <p>Shift your brain into overdrive with this puzzle game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699338101165-BrainShiftOverDrive_WebGL/BrainShiftOverDrive_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Rain Drops -->
+            <div class="game-item">
+                <h2>Rain Drops</h2>
+                <p>Catch the raindrops in this fun and engaging game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699337842150-RainDrops_WebGL1/RainDrops_WebGL1/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Pinball Recall -->
+            <div class="game-item">
+                <h2>Pinball Recall</h2>
+                <p>Relive the classic pinball experience with a twist.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699337656395-PinballRecall_WebGL/PinballRecall_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Memory Matrix -->
+            <div class="game-item">
+                <h2>Memory Matrix</h2>
+                <p>Test your memory skills with the matrix challenge.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699336960749-MemoryMatrix_WebGL/MemoryMatrix_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Memory Match -->
+            <div class="game-item">
+                <h2>Memory Match</h2>
+                <p>Find matching pairs in this memory challenge.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699336752119-MemoryMatch_WebGL/MemoryMatch_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Speed Match -->
+            <div class="game-item">
+                <h2>Speed Match</h2>
+                <p>Match the items quickly in this fast-paced game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699336549316-SpeedMatch_WebGL/SpeedMatch_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Space Bubble -->
+            <div class="game-item">
+                <h2>Space Bubble</h2>
+                <p>Pop bubbles in space with this engaging game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699336505199-SpaceBubble_WebGL/SpaceBubble_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Slice Card -->
+            <div class="game-item">
+                <h2>Slice Card</h2>
+                <p>Slice cards to match and solve the puzzle.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699336460798-SliceCard_WebGL1/SliceCard_WebGL1/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Tidal Treasure -->
+            <div class="game-item">
+                <h2>Tidal Treasure</h2>
+                <p>Discover treasures in the tidal waves of this game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699336148161-TidalTresure_WebGL/TidalTresure_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Star Search -->
+            <div class="game-item">
+                <h2>Star Search</h2>
+                <p>Search for stars in this cosmic adventure.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699336027562-StarSearch_WebGl/StarSearch_WebGl/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Speed Pack -->
+            <div class="game-item">
+                <h2>Speed Pack</h2>
+                <p>Pack items quickly in this speed challenge.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699335942763-SpeedPack_WebGL1/SpeedPack_WebGL1/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Tunnel Ball -->
+            <div class="game-item">
+                <h2>Tunnel Ball</h2>
+                <p>Guide the ball through tunnels in this fun game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699335893860-TunnelBall_WebGL1/TunnelBall_WebGL1/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Sky Rise -->
+            <div class="game-item">
+                <h2>Sky Rise</h2>
+                <p>Build sky-high structures in this engaging game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699335850212-SkyRise_WebGL/SkyRise_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Spicy Riddles -->
+            <div class="game-item">
+                <h2>Spicy Riddles</h2>
+                <p>Answer spicy riddles in this brain teaser.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699334987539-SpicyRiddlesWebGL/SpicyRiddlesWebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Word Families -->
+            <div class="game-item">
+                <h2>Word Families</h2>
+                <p>Explore word families in this educational game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699333722761-WordFamiliesADAPANAT_WebGL/WordFamiliesADAPANAT_WebGL/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Burst The Balloon Numbers -->
+            <div class="game-item">
+                <h2>Burst The Balloon Numbers</h2>
+                <p>Pop balloons with numbers in this fun game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699331317523-BurstTheBalloonNumbers_1to5/BurstTheBalloonNumbers_1to5/index.html" target="_blank">Play Now</a>
+            </div>
+            <!-- Burst The Balloon -->
+            <div class="game-item">
+                <h2>Burst The Balloon</h2>
+                <p>Pop the balloons in this exciting game.</p>
+                <a href="https://webgl-media.teamfeeltech.com/output/1699274397003-BurstTheBalloonWebGL_A/BurstTheBalloonWebGL_A/index.html" target="_blank">Play Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <p>LinkedIn Profile: 
+        <a href="https://www.linkedin.com/in/pinank-patel-484880149/" target="_blank">
+            Pinank Patel
+        </a>
+    </p>
+    </footer>
+
+</body>
+</html>
