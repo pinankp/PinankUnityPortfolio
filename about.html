@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Pinank Patel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffffff, #eaedf3); /* Light gradient */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent dark gray */
+            color: #ffffff;
+            padding: 1rem 10px; /* Added padding to both sides */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: calc(100% - 20px); /* Adjust width to account for padding */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure header is on top */
+        }
+
+        header .back-button {
+            color: #ffffff;
+            font-size: 2rem; /* Increase size for better visibility */
+            margin-right: 1rem; /* Space between the arrow and title */
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding-left: 2rem;
+        }
+
+        header .back-button svg {
+            width: 40px; /* Larger arrow for better visibility */
+            height: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.75rem; /* Medium font size for page title */
+            color: #ffffff;
+            text-align: center;
+            flex: 1; /* Center the title */
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 1rem 4rem; /* Padding to make space for fixed header */
+            margin: 0 auto;
+            max-width: 1200px;
+            flex: 1;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            color: #343a40;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            font-size: 1.25rem;
+            color: #555;
+            line-height: 1.6;
+            margin: 1rem 0 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .skills-table {
+            width: 100%;
+            max-width: 800px; /* Set a maximum width for the table */
+            margin: 2rem auto; /* Center the table horizontally */
+            border-collapse: separate;
+            border-spacing: 0; /* Remove default spacing */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden; /* Clip overflow for rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+        }
+
+        .skills-table th, .skills-table td {
+            padding: 1rem; /* Increase padding for better readability */
+            border: 1px solid #ddd;
+            text-align: center; /* Center text horizontally */
+            vertical-align: middle; /* Center text vertically */
+            font-weight: bold; /* Make text bold */
+        }
+
+        .skills-table th {
+            background-color: #343a40; /* Dark gray for the header */
+            color: #ffffff; /* White text color */
+            font-size: 1.25rem; /* Larger font size for header */
+            border-bottom: 2px solid #444; /* Darker border for bottom of header */
+        }
+
+        .skills-table td {
+            background-color: #ffffff; /* White background for cells */
+            color: #333; /* Dark text color */
+            font-size: 1rem; /* Font size for cells */
+        }
+
+        .skills-table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Light gray for alternate rows */
+        }
+
+        .skills-table tr:hover {
+            background-color: #e2e6ea; /* Slightly darker gray on hover */
+        }
+
+        .skills-table td:hover {
+            background-color: #f1f1f1; /* Slightly darker gray on cell hover */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent dark gray */
+            color: #ffffff;
+            padding: 1rem;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 0.875rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure footer is on top */
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #cfd8dc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem;
+                width: 100%;
+            }
+
+            .content h1 {
+                font-size: 1.5rem;
+            }
+
+            .content p {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-button">
+            <!-- Back Arrow Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="bi bi-arrow-left">
+                <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 0 1 1.414 1.414L10.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414l-7-7a1 1 0 0 1 0-1.414l7-7z"/>
+            </svg>
+        </a>
+        <h1>About Me</h1>
+    </header>
+
+    <div class="content">
+        <h1>Who Am I?</h1>
+        <p>Experienced Unity Developer with a demonstrated history of working in the information technology and services industry.</p>
+        <p>Skilled in C#, Java, C++ (Programming Language) and creating 2D, 3D, AR, VR and Multiplayer games with Unity3D Game Engine.</p>
+        
+        <table class="skills-table">
+            <tr>
+                <th colspan="2">Skills</th>
+            </tr>
+            <tr>
+                <td>In app purchase Integration</td>
+                <td>WebGL Game Development</td>
+            </tr>
+            <tr>
+                <td>API integration</td>
+                <td>Game Optimization</td>
+            </tr>
+            <tr>
+                <td>2D Game Development</td>
+                <td>Ads Integration</td>
+            </tr>
+            <tr>
+                <td>3D Game Development</td>
+                <td>Audio Integration</td>
+            </tr>
+            <tr>
+                <td>AR (Augmented Reality)</td>
+                <td>Platforms (Android, iOS, WebGL)</td>
+            </tr>
+            <tr>
+                <td>User Interface (UI/UX), 3D Models</td>
+                <td>Making Animations 2D, 3D in Unity</td>
+            </tr>
+            <tr>
+                <td>Multiplayer Games</td>
+                <td>VR (Virtual Reality)</td>
+            </tr>
+            <tr>
+                <td>Game Design</td>
+                <td>Photoshop</td>
+            </tr>
+            <tr>
+                <td>Node JS</td>
+                <td>MySql</td>
+            </tr>
+        </table>
+
+        <p>Developed more than 100+ Clients Projects and delivered<br>
+           Developed more than 10+ Products while working with companies</p>
+    </div>
+
+</body>
+</html>

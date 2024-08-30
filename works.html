@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinank Patel | Works</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffffff, #eaedf3); /* Light gradient */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent dark gray */
+            color: #ffffff;
+            padding: 1rem 10px; /* Added padding to both sides */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure header is on top */
+        }
+
+        header .back-button {
+            color: #ffffff;
+            font-size: 2rem; /* Increase size for better visibility */
+            margin-right: auto; /* Push the page name to the center */
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding-left: 2rem;
+        }
+
+        header .back-button svg {
+            width: 40px; /* Adjust arrow size */
+            height: 40px;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 1rem;
+            flex: 1;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            width: 100%;
+            max-width: 1200px; /* Limit width for larger screens */
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #343a40;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .project {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.062), rgba(255, 255, 255, 0.1)); /* Subtle black to white gradient */
+            color: #333;
+            border-radius: 35px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.493);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            position: relative;
+            width: 100%; /* Full width for responsiveness */
+            max-width: 300px; /* Limit width */
+            margin: 0.5rem; /* Added margin */
+        }
+
+        .project .details {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .project h3 {
+            font-size: 1.25rem;
+            margin: 1rem 0;
+            color: #333;
+        }
+
+        .project p {
+            font-size: 0.875rem;
+            color: #666;
+            margin: 1rem 0;
+        }
+
+        .project .play-now {
+            background-color: #007bff; /* Button color */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem 1.25rem; /* Increased padding */
+            font-size: 0.875rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 1.5rem; /* Increased margin-top for spacing */
+            display: inline-block; /* Ensure proper spacing */
+        }
+
+        .project .play-now:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            transform: scale(1.05);
+        }
+
+        .project .explore {
+            background-color: #28a745; /* Button color */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem 1.25rem; /* Increased padding */
+            font-size: 0.875rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 1.5rem; /* Increased margin-top for spacing */
+            display: inline-block; /* Ensure proper spacing */
+        }
+
+        .project .explore:hover {
+            background-color: #218838; /* Darker shade on hover */
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent dark gray */
+            color: #ffffff;
+            padding: 1rem;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 0.875rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure footer is on top */
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #cfd8dc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .content h2 {
+                font-size: 1.5rem;
+            }
+
+            .project h3 {
+                font-size: 1rem;
+            }
+
+            .project p {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.25rem;
+            }
+
+            .project {
+                max-width: 100%;
+            }
+
+            .content h2 {
+                font-size: 1.25rem;
+            }
+
+            .project h3 {
+                font-size: 0.875rem;
+            }
+
+            .project p {
+                font-size: 0.625rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 19L8 12L15 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <h1>Projects</h1>
+    </header>
+
+    <div class="content">
+        <div class="section">
+            <h2>Google Play Store (Games)</h2>
+            <p><b>Explore a selection of my Android applications available on the Google Play Store. Click "Play Now" to get more details and download the apps.</b></p>
+            <div class="projects">
+                <div class="project">
+                    <div class="details">
+                        <h3>ABCKidsTV - Tracing & Phonics</h3>
+                        <p>Learn the alphabet, numbers, and first words with our fun and interactive app.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.kidslearnalphabets.abcfuntrace&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h3>Spin 'n Say: Education Spinner</h3>
+                        <p>Spin 'n Say is an exciting educational app that helps kids learn new words, boost their vocabulary, and improve their speaking skills.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.kidslearninggames.spinandsays&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h3>ABCKidsTV - Play & Learn</h3>
+                        <p>With over 108 words to learn, our interactive app makes it easy for kids to expand their vocabulary. Through colorful alphabet puzzles and funny animations, children can enjoy learning new words in an engaging way.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.kidslearnendless.abcinfinite&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h3>Veeksha</h3>
+                        <p>blend technology with education, enhance learner's experience by producing 3D interactives, simulations, games and much more.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.ftd.veeksha&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h3>Kidz Varsity English</h3>
+                        <p>Kidz Varsity is set off a vibrant learning journey with our Kids English Learning Game, Specially crafted for Children's mind.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.kidzvarsityenglish.app&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <div class="details">
+                        <h3>Kidz Varsity Colors</h3>
+                        <p>Kidz Varsity Color presents an exciting learning adventure with our Color Learning Game!</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.kidzvarsitycolors.app&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h3>Kidz Varsity Maths</h3>
+                        <p>mathematical journey with Kidz Varsity Maths, specially designed to ignite children's curiosity and love for numbers!</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.kidzvarsitymaths.app&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h3>Pipe Destiny</h3>
+                        <p>Connect colorful pipes, solve intricate puzzles, and enjoy hours of fun as you navigate through increasingly difficult levels.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.pipedestiny.app&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h3>Word Puzzle</h3>
+                        <p>testing your vocabulary skills and challenging your brain? Look no further! Word Puzzle is the perfect game for you.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.wordpuzzle.app&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h3>ConnectMe</h3>
+                        <p>creativity and problem-solving skills are your greatest assets! In this innovative puzzle game.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.connectme.app&pcampaignid=web_share" class="play-now" target="_blank">Explore Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Client Projects (Games)</h2>
+            <p><b>Discover my web-based games that offer a variety of challenges and entertainment. Click "Play Now" to start playing directly in your browser.</b></p>
+            <div class="projects">
+                <div class="project">
+                    <div class="details">
+                        <h3>Memory Game</h3>
+                        <p>A classic memory card game where players match pairs.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1713526630509-MemoryGame_WebGL/MemoryGame_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Math Balancing</h3>
+                        <p>A puzzle game focusing on solving math equations by balancing them.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1713526603703-MathBalancing_WebGL/MathBalancing_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Connect Dots</h3>
+                        <p>Connect dots to form shapes and complete patterns.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1713526551600-ConnectDots_WebGL/ConnectDots_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Cups and Balls</h3>
+                        <p>A game of skill where you match cups with the right ball.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1713438133732-CupsAndBalls_WebGL/CupsAndBalls_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Color Test</h3>
+                        <p>A game that challenges your color perception abilities.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1702618372754-ColorTest_WebGL/ColorTest_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Nature Discovery</h3>
+                        <p>Explore the wonders of nature through this engaging game.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1704198659552-Nature_Discovery_WebGL/Nature_Discovery_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>IluHop Number Sequence</h3>
+                        <p>A game that tests your ability to sequence numbers correctly.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699523078226-IluHopNumberSequence_WebGL/IluHopNumberSequence_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Rolling and Sliding</h3>
+                        <p>Guide rolling and sliding objects through various obstacles.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699419841181-Rolling_And_Sliding_WebGL/Rolling_And_Sliding_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Ebb and Blow</h3>
+                        <p>A relaxing game with ebb and flow mechanics.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699338273442-EbbAndBlow_WebGL/EbbAndBlow_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Color Match</h3>
+                        <p>Match colors to solve puzzles and complete challenges.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699338241765-ColorMatch_WebGL/ColorMatch_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Brain Shift Overdrive</h3>
+                        <p>A brain-teasing game that pushes your mental limits.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699338101165-BrainShiftOverDrive_WebGL/BrainShiftOverDrive_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Rain Drops</h3>
+                        <p>A game where you catch falling drops and avoid obstacles.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699337842150-RainDrops_WebGL1/RainDrops_WebGL1/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Pinball Recall</h3>
+                        <p>A pinball game with exciting challenges and high scores.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699337656395-PinballRecall_WebGL/PinballRecall_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Memory Matrix</h3>
+                        <p>Test your memory skills with this engaging matrix game.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699336960749-MemoryMatrix_WebGL/MemoryMatrix_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Memory Match</h3>
+                        <p>Another variation of the memory matching game with new levels.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699336752119-MemoryMatch_WebGL/MemoryMatch_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Speed Match</h3>
+                        <p>A fast-paced game where quick thinking is key.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699336549316-SpeedMatch_WebGL/SpeedMatch_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Space Bubble</h3>
+                        <p>Pop bubbles in space and achieve high scores.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699336505199-SpaceBubble_WebGL/SpaceBubble_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Slice Card</h3>
+                        <p>Slice and match cards to win the game.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699336460798-SliceCard_WebGL1/SliceCard_WebGL1/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Tidal Treasure</h3>
+                        <p>Find hidden treasures in the tide with this adventurous game.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699336148161-TidalTresure_WebGL/TidalTresure_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Star Search</h3>
+                        <p>Search for stars and complete the night sky.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699336027562-StarSearch_WebGl/StarSearch_WebGl/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Speed Pack</h3>
+                        <p>Test your speed and reflexes with this exciting game.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699335942763-SpeedPack_WebGL1/SpeedPack_WebGL1/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Tunnel Ball</h3>
+                        <p>Navigate through a tunnel and avoid obstacles with a ball.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699335893860-TunnelBall_WebGL1/TunnelBall_WebGL1/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Sky Rise</h3>
+                        <p>Climb up to the sky and reach new heights.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699335850212-SkyRise_WebGL/SkyRise_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Spicy Riddles</h3>
+                        <p>Challenge your brain with these spicy riddles.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699334987539-SpicyRiddlesWebGL/SpicyRiddlesWebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Directions Nursery</h3>
+                        <p>A fun and educational game for young learners.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699503341347-Directions_Nursery_WebGL/Directions_Nursery_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Word Families ETEN</h3>
+                        <p>Enhance your vocabulary with engaging word family games.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699333666192-WordFamiliesETEN_WebGL/WordFamiliesETEN_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>IluHop Tense</h3>
+                        <p>Test your skills with this challenging tense-based game.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699332649888-IluHopTense_WebGL/IluHopTense_WebGL/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Burst the Balloon (1 to 5)</h3>
+                        <p>A balloon-popping game designed for young players.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699331317523-BurstTheBalloonNumbers_1to5/BurstTheBalloonNumbers_1to5/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+        
+                <div class="project">
+                    <div class="details">
+                        <h3>Burst the Balloon (A)</h3>
+                        <p>Another balloon-popping game with different challenges.</p>
+                        <a href="https://webgl-media.teamfeeltech.com/output/1699274397003-BurstTheBalloonWebGL_A/BurstTheBalloonWebGL_A/index.html" class="explore" target="_blank">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

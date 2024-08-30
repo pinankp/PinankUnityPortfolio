@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinank Patel | Home</title>
+    <title>Contact Me | Pinank Patel</title>
     <style>
         body {
             margin: 0;
@@ -24,7 +24,6 @@
             padding: 1rem 10px; /* Added padding to both sides */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: flex;
-            justify-content: space-between;
             align-items: center;
             position: fixed;
             width: calc(100% - 20px); /* Adjust width to account for padding */
@@ -33,36 +32,34 @@
             z-index: 1000; /* Ensure header is on top */
         }
 
-        header .logo {
-            font-size: 2rem;
-            font-weight: 700;
-            padding-left: 2rem; /* Space for logo on the left */
-        }
-
-        header nav {
-            display: flex;
-            gap: 2rem;
-            padding-right: 2rem; /* Space for navigation items */
-        }
-
-        header a {
+        header .back-button {
             color: #ffffff;
+            font-size: 2rem; /* Increase size for better visibility */
+            margin-right: 1rem; /* Space between the arrow and title */
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: color 0.3s, text-shadow 0.3s;
+            padding-left: 2rem;
         }
 
-        header a:hover {
-            color: #cfd8dc;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+        header .back-button svg {
+            width: 40px; /* Larger arrow for better visibility */
+            height: 40px;
         }
 
-        .intro {
+        header h1 {
+            margin: 0;
+            font-size: 1.75rem; /* Medium font size for page title */
+            color: #ffffff;
+            text-align: center;
+            flex: 1; /* Center the title */
+        }
+
+        .content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
             padding: 6rem 1rem 4rem; /* Padding to make space for fixed header */
             margin: 0 auto;
@@ -71,29 +68,12 @@
             z-index: 1;
         }
 
-        .intro h1 {
-            font-size: 3rem;
-            margin: 0;
-            color: #343a40;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
-            animation: textGlow 1.5s infinite alternate;
-        }
-
-        .intro p {
-            font-size: 1.25rem;
+        .content p {
+            font-size: 1.5rem;
             color: #555;
             line-height: 1.6;
             margin: 1rem 0 0;
             animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes textGlow {
-            from {
-                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
-            }
-            to {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-            }
         }
 
         @keyframes fadeIn {
@@ -132,20 +112,8 @@
         }
 
         @media (max-width: 768px) {
-            .intro h1 {
-                font-size: 2.5rem;
-            }
-
-            .intro p {
+            .content p {
                 font-size: 1rem;
-            }
-
-            header nav {
-                gap: 1rem;
-            }
-
-            header a {
-                font-size: 0.875rem;
             }
         }
 
@@ -155,25 +123,7 @@
                 width: 100%;
             }
 
-            header .logo {
-                font-size: 1.25rem;
-                padding-left: 1rem;
-            }
-
-            header nav {
-                gap: 0.75rem;
-                padding-right: 1rem;
-            }
-
-            header a {
-                font-size: 0.75rem;
-            }
-
-            .intro h1 {
-                font-size: 2rem;
-            }
-
-            .intro p {
+            .content p {
                 font-size: 0.875rem;
             }
         }
@@ -182,18 +132,20 @@
 <body>
 
     <header>
-        <div class="logo">Pinank Patel</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="works.html">Projects</a>
-            <a href="contactme.html">Contact</a>
-        </nav>
+        <a href="index.html" class="back-button">
+            <!-- Back Arrow Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="bi bi-arrow-left">
+                <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 0 1 1.414 1.414L10.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414l-7-7a1 1 0 0 1 0-1.414l7-7z"/>
+            </svg>
+        </a>
+        <h1>Contact Me</h1>
     </header>
 
-    <div class="intro">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi there! I’m Pinank Patel, a skilled Unity3D Developer focused on building immersive and interactive experiences. Check out my projects, learn about my professional background, and feel free to connect with me for any questions or collaboration ideas.</p>
+    <div class="content">
+        <p><b>Feel free to contact me using the details below:</b></p>
+        <p>Email: pinank.patel.mca@gmail.com</p>
+        <p>Phone: +91 7405297114</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/pinank-patel-484880149/" target="_blank">PinankPatel</a></p>
     </div>
 
 </body>
