@@ -105,6 +105,26 @@
             }
         }
 
+        .explore-btn {
+            margin-top: 2rem;
+            padding: 0.75rem 2rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(135deg, #007bff, #6610f2); /* Gradient background */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        .explore-btn:hover {
+            background: linear-gradient(135deg, #0056b3, #4b0082); /* Darker gradient on hover */
+            transform: scale(1.05);
+        }
+
         footer {
             background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent dark gray */
             color: #ffffff;
@@ -194,7 +214,14 @@
     <div class="intro">
         <h1>Welcome to My Portfolio</h1>
         <p>Hi there! I’m Pinank Patel, a skilled Unity3D Developer focused on building immersive and interactive experiences. Check out my projects, learn about my professional background, and feel free to connect with me for any questions or collaboration ideas.</p>
+        <!-- Button added here -->
+        <a href="works.html" class="explore-btn">Explore Projects</a>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Pinank Patel. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
 
 </body>
 </html>
